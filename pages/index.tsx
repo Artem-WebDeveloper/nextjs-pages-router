@@ -1,15 +1,13 @@
-import { Geist, Geist_Mono } from 'next/font/google';
-
-const geistSans = Geist({
-  variable: '--font-geist-sans',
-  subsets: ['latin'],
-});
-
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
-  subsets: ['latin'],
-});
+import Link from 'next/link';
 
 export default function Home() {
-  return <h1>Hello</h1>;
+  return (
+    <div>
+      <h1>Hello</h1>
+      <div>
+        <Link href="/cabins">Cabins</Link>
+        <Link href="/about">About</Link>
+      </div>
+    </div>
+  );
 }
