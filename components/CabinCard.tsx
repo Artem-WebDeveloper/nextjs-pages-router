@@ -13,10 +13,11 @@ function CabinCard({ cabin }) {
           fill
           alt={`Cabin ${name}`}
           className="object-cover border-r border-primary-800"
+          sizes="(max-width: 768px) 50vw, 25vw"
         />
       </div>
 
-      <div className="flex-grow">
+      <div className="grow">
         <div className="pt-5 pb-4 px-7 bg-primary-950">
           <h3 className="text-accent-500 font-semibold text-2xl mb-3">Cabin {name}</h3>
 
