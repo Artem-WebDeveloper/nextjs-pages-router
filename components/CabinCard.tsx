@@ -1,8 +1,9 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { UsersIcon } from '@heroicons/react/24/solid';
+import { Cabin } from '@/types';
 
-function CabinCard({ cabin }) {
+function CabinCard({ cabin }: { cabin: Cabin }) {
   const { id, name, maxCapacity, regularPrice, discount, image } = cabin;
 
   return (

@@ -1,17 +1,16 @@
 import CabinList from '@/components/CabinList';
 import { getCabins } from '@/lib/data-service';
+import { Cabin } from '@/types';
 import Head from 'next/head';
 
 // Генерируется статически (SSG)
 export async function getStaticProps() {
   const cabins = await getCabins();
 
-  return { props: { cabins } };
+  return { props: { cabins }, revalidate: 3600 };
 }
 
-function Cabins({ cabins }) {
-  console.log(cabins);
-
+function Cabins({ cabins }: { cabins: Cabin[] }) {
   return (
     <>
       <Head>
